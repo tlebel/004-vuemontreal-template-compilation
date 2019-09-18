@@ -32,12 +32,15 @@ function postTransformNode(node) {
         }
 
         console.log('Edited options', {options});
-        
+
         return options;
       })
   }
 }
 
+// Extract from vue-cli generated webpack template
+// $ vue inspect
+// 
 // /* config.module.rule('vue') */
 // {
 //     test: /\.vue$/,
@@ -52,14 +55,14 @@ function postTransformNode(node) {
 //       },
 //       /* config.module.rule('vue').use('vue-loader') */
 //       {
-//         loader: 'vue-loader',
-//         options: {
-//           compilerOptions: {
-//             preserveWhitespace: false
-//           },
-//           cacheDirectory: '/Users/tommy/dev/playground/meetup/vue-template-compilation-tests/node_modules/.cache/vue-loader',
-//           cacheIdentifier: '0c49edf2'
-//         }
+// --->    loader: 'vue-loader',
+// --->    options: {
+// --->      compilerOptions: {
+// --->        preserveWhitespace: false
+// --->      },
+// --->      cacheDirectory: '/Users/tommy/dev/playground/meetup/vue-template-compilation-tests/node_modules/.cache/vue-loader',
+// --->      cacheIdentifier: '0c49edf2'
+// --->    }
 //       }
 //     ]
 //   },
