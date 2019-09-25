@@ -1,4 +1,8 @@
 <template>
+  <!--
+    For more context, see Cypress.io best practices: Selecting Elements
+    https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements
+  -->
   <div data-test="myMessassgeWrapper" class="hello">
     <h1 data-test="myMessage">{{ msg }}</h1>
     <p>

@@ -21,13 +21,12 @@ module.exports = {
       delete options.cacheDirectory;
 
       if (process.env.NODE_ENV === 'production') {
-        if (Array.isArray(options.compilerOptions.modules)) {
-          options.compilerOptions.modules.push({ postTransformNode: removeDataTest });
-        } else {
-          options.compilerOptions.modules = [
-            { postTransformNode: removeDataTest }
-          ];
+        // See details here
+        // https://vue-loader.vuejs.org/options.html#compileroptions
+        if (!Array.isArray(options.compilerOptions.modules)) {
+          options.compilerOptions.modules = [];
         }
+        options.compilerOptions.modules.push({ postTransformNode: removeDataTest });
       }
 
       console.log('Edited options', {options});
