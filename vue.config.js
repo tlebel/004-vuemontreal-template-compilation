@@ -26,6 +26,8 @@ module.exports = {
         if (!Array.isArray(options.compilerOptions.modules)) {
           options.compilerOptions.modules = [];
         }
+        // See object format:
+        // https://github.com/vuejs/vue/blob/dev/flow/compiler.js#L47-L59
         options.compilerOptions.modules.push({ postTransformNode: removeDataTest });
       }
 
